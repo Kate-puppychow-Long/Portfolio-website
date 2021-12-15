@@ -1,0 +1,247 @@
+/*
+Native CSS Variables 
+*/
+
+ :root {
+  --nav-link-color: #357b70;
+  --text-color: #2b2b2b;
+  --header-color: #f3e0d4;
+  --plum: #3f0c34;
+  --button-color: #dfb7d9;
+  --accent-grey: #8b8b8b;
+  --light-yellow: #eede82;
+  --deep-yellow: #f5cd49;
+  --orange: #f7a121;
+
+  --standard-headline-wieght: 700;
+  }
+
+  body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    /* Sets the font size to 16px */
+    line-height: 1.6;
+    /* Sets the line-height to 1.6 */
+    text-overflow: center;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: var(--standard-headline-wieght);
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: var(--standard-headline-wieght);
+  }
+  
+  h3 {
+    font-size: 18px;
+    font-weight: var(--standard-headline-wieght);
+  }
+
+  .page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--header-color);
+    border-bottom-color: var(--accent-grey);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+  
+
+  .page-header__item:first-child {
+    width:200px;
+  }
+  
+  .page-header__item {
+    flex: 0 1 200px;
+
+  }
+
+  .page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  .navigation-list {
+    list-style-type: none;
+  }
+
+  .navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  
+  a {
+    color: var(--text-color);
+  }
+  
+  a:visited {
+    /* visited link */
+    color: var(--plum);
+  }
+  
+  a:hover, a:focus {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+  }
+
+  a:active {
+  /* selected link */
+  color: var(--plum);
+}
+  
+.profile { 
+text-align:center;
+max-width: 700px;
+margin: 0 auto;
+}
+.primary__headline{
+  text-align:center;
+}
+.profile__portrait {
+  width: 250px;
+  height:250px;
+  border-radius: 50%;
+}
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.about-introduction {
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.about-specialize__list {
+  /* removes bullets from list*/
+  list-style-type: none;
+  }
+
+.about-table{
+border: 1px solid rgb(46, 42, 42);
+min-width: 500px;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+border-collapse: collapse;
+}
+
+.about-table__header{
+background-color: var(--button-color);
+}
+
+.download-button-wrapper{
+  display: flex;
+  justify-content: center; 
+}
+
+.about-cv-button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* takes the font from the outer container */
+  display:inline-block;
+  text-align: center;
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: var(--button-color);
+  color:rgb(49, 20, 56);
+  text-decoration: none;
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity;
+  /*centers CV button*/
+  max-width: 250px;
+  
+ 
+}
+
+.about-cv-button:hover, .about-cv-button:focus
+{
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 50% */
+  opacity: 0.5;
+ 
+}
+
+.sun {
+  animation-duration: 6s;
+  animation-name: color-change, sun-grow;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes sun-grow {
+  from {
+    transform: scale(1.5,1.5);
+    transform-origin: top left;
+  }
+}
+@keyframes color-change {
+  0% {
+    fill: var(--light-yellow);
+  }
+  50% {
+    fill: var(--deep-yellow);
+  }
+  100% {
+    fill: var(--orange);
+  }
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  
+}
+
+.grid__item {
+  background-color: var(--accent-grey);
+}
+
+
+@media all and (max-width: 500px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media all and (min-width: 500px) and (max-width: 750px){
+  .work-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .work-grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  
+  }

@@ -1,0 +1,301 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/*
+Native CSS Variables 
+*/
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 */
+  -o-text-overflow: center;
+     text-overflow: center;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  background-color: #f3e0d4;
+  border-bottom-color: #8b8b8b;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+
+.page-header__item:first-child {
+  width:200px;
+}
+
+.page-header__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
+
+}
+
+.page-header__item:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+a {
+  color: #2b2b2b;
+}
+
+a:visited {
+  /* visited link */
+  color: #3f0c34;
+}
+
+a:hover, a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+
+a:active {
+/* selected link */
+color: #3f0c34;
+}
+
+.profile { 
+text-align:center;
+max-width: 700px;
+margin: 0 auto;
+}
+.primary__headline{
+text-align:center;
+}
+.profile__portrait {
+width: 250px;
+height:250px;
+border-radius: 50%;
+}
+.page-footer {
+clear: both;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient:vertical;
+-webkit-box-direction:normal;
+    -ms-flex-direction:column;
+        flex-direction:column;
+-webkit-box-align:center;
+    -ms-flex-align:center;
+        align-items:center;
+}
+
+.about-introduction {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient:vertical;
+-webkit-box-direction:normal;
+    -ms-flex-direction:column;
+        flex-direction:column;
+-webkit-box-align:center;
+    -ms-flex-align:center;
+        align-items:center;
+}
+
+.about-specialize__list {
+/* removes bullets from list*/
+list-style-type: none;
+}
+
+.about-table{
+border: 1px solid rgb(46, 42, 42);
+min-width: 500px;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+border-collapse: collapse;
+}
+
+.about-table__header{
+background-color: #dfb7d9;
+}
+
+.download-button-wrapper{
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center; 
+}
+
+.about-cv-button {
+/* overwrites browser defaults and resets the border */
+border: none;
+/* takes the font from the outer container */
+display:inline-block;
+text-align: center;
+font-family: inherit;
+/* styles the background color, font color, and text decoration (underline, etc.) of the button */
+background-color: #dfb7d9;
+color:rgb(49, 20, 56);
+text-decoration: none;
+/*adds spacing to the button (this will be discussed more in-depth later) */
+padding: 10px;
+border-radius: 3px;
+/* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+-webkit-transition: 0.2s opacity;
+-o-transition: 0.2s opacity;
+transition: 0.2s opacity;
+/*centers CV button*/
+max-width: 250px;
+
+
+}
+
+.about-cv-button:hover, .about-cv-button:focus
+{
+/* lets the mouse appear as a hand when hovering over the button */
+cursor: pointer;
+/* reduces the opacity of the button to 50% */
+opacity: 0.5;
+
+}
+
+.sun {
+-webkit-animation-duration: 6s;
+        animation-duration: 6s;
+-webkit-animation-name: color-change, sun-grow;
+        animation-name: color-change, sun-grow;
+-webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+-webkit-animation-direction: alternate;
+        animation-direction: alternate;
+-webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+-webkit-animation-fill-mode: none;
+        animation-fill-mode: none;
+-webkit-animation-play-state: running;
+        animation-play-state: running;
+}
+
+@-webkit-keyframes sun-grow {
+from {
+  -webkit-transform: scale(1.5,1.5);
+          transform: scale(1.5,1.5);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+}
+
+@keyframes sun-grow {
+from {
+  -webkit-transform: scale(1.5,1.5);
+          transform: scale(1.5,1.5);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+}
+@-webkit-keyframes color-change {
+0% {
+  fill: #eede82;
+}
+50% {
+  fill: #f5cd49;
+}
+100% {
+  fill: #f7a121;
+}
+}
+@keyframes color-change {
+0% {
+  fill: #eede82;
+}
+50% {
+  fill: #f5cd49;
+}
+100% {
+  fill: #f7a121;
+}
+}
+
+.work-grid {
+display: -ms-grid;
+display: grid;
+-ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: 20px;
+
+}
+
+.grid__item {
+background-color: #8b8b8b;
+}
+
+
+@media all and (max-width: 500px) {
+.work-grid {
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+}
+
+
+@media all and (min-width: 500px) and (max-width: 750px){
+.work-grid {
+  -ms-grid-columns: 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+}
+
+@media all and (max-width: 750px) {
+.work-grid {
+  grid-gap: 10px;
+}
+.grid__item:last-child {
+  grid-column: auto / auto;
+  grid-row: auto / auto;
+}
+h1 {
+  font-size: 22px;
+}
+
+}
